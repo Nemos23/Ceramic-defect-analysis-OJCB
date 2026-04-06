@@ -1,0 +1,170 @@
+# ============================================================
+#  .gitignore — Data Science Project (Python / Jupyter / Colab)
+# ============================================================
+
+
+# ------------------------------------------------------------
+# DATOS — nunca subir datos crudos o procesados a GitHub
+# ------------------------------------------------------------
+data/raw/
+data/processed/
+data/external/
+data/interim/
+*.csv
+*.tsv
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.db
+*.sqlite
+*.xlsx
+*.xls
+*.json.gz
+
+# Excepciones: archivos de muestra pequeños para documentación
+# !data/sample/ejemplo.csv
+
+
+# ------------------------------------------------------------
+# MODELOS — archivos grandes de modelos entrenados
+# ------------------------------------------------------------
+models/
+*.pt
+*.pth
+*.ckpt
+*.pb
+*.h5
+*.joblib
+*.model
+*.bin
+saved_model/
+
+
+# ------------------------------------------------------------
+# CREDENCIALES Y SECRETOS — nunca exponer tokens o claves
+# ------------------------------------------------------------
+.env
+.env.*
+secrets.json
+credentials.json
+token.json
+service_account.json
+*_key.json
+*.pem
+*.p12
+
+
+# ------------------------------------------------------------
+# JUPYTER / COLAB
+# ------------------------------------------------------------
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# Outputs de notebooks (opcional: comentar si quieres conservarlos)
+# Para limpiar outputs antes de commit: jupyter nbconvert --clear-output
+# *.ipynb  ← NO ignorar, son tu código principal
+
+
+# ------------------------------------------------------------
+# PYTHON
+# ------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+*.manifest
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# pytest y cobertura
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+nosetests.xml
+coverage.xml
+
+# mypy
+.mypy_cache/
+.dmypy.json
+
+
+# ------------------------------------------------------------
+# LOGS Y REPORTES TEMPORALES
+# ------------------------------------------------------------
+logs/
+*.log
+*.out
+mlruns/
+wandb/
+.neptune/
+lightning_logs/
+
+
+# ------------------------------------------------------------
+# SISTEMA OPERATIVO
+# ------------------------------------------------------------
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+
+# ------------------------------------------------------------
+# EDITORES E IDEs
+# ------------------------------------------------------------
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+
+
+# ------------------------------------------------------------
+# DVC (Data Version Control) — si lo usas para datos grandes
+# ------------------------------------------------------------
+# /data/*.dvc  ← estos SÍ se deben subir si usas DVC
+.dvc/tmp/
+.dvc/cache/
+
+
+# ------------------------------------------------------------
+# MISCELÁNEOS
+# ------------------------------------------------------------
+*.tmp
+*.temp
+*.bak
+*.orig
+.cache/
