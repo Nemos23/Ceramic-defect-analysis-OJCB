@@ -68,8 +68,8 @@ A machine learning model was developed to:
 
 Models evaluated:
 
-* Logistic Regression
-* Random Forest (selected)
+* Random Forest
+* XGBoost + SMOTE
 
 Evaluation metrics:
 
@@ -136,9 +136,6 @@ This approach can be directly implemented in:
 │   ├── 01_exploratory_analysis.ipynb
 │   ├── 02_statistical_process_control.ipynb
 │   └── 03_defect_prediction_model.ipynb
-│
-├── src/
-│   └── spc_utils.py
 │
 ├── requirements.txt
 └── README.md
